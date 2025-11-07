@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class-38</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Google Fonts Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts End -->
+  </head>
+  <body>
+    <!-- 1st page Start -->
+    <div id="fisrtPage" class="max-w-[1320px] m-auto text-center">
+      <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <div
+          class="mockup-phone-display text-black grid place-content-center bg-[#F4F5F7]"
+        >
+          <div class="mt-[-100px]">
+            <div class="">
+              <picture>
+                <img class="m-auto" src="images/Logo.png" alt="Logo.png" />
+              </picture>
+            </div>
+            <div class="py-8 px-8 bg-white w-[402px] rounded-[24px] text-start">
+              <h2
+                class="font-outfit font-medium text-[16px] text-[#080808] mb-3"
+              >
+                Mobile Number
+              </h2>
+              <form>
+                <input id="number"
+                  class="bg-[#F4F5F7] border-0 w-[338px] py-4 pl-[20px] rounded-[32px] font-outfit font-light text-[16px] text-[#080808] outline-0"
+                  type="text"
+                  placeholder="Enter your number"
+                />
+              </form>
+              <h2
+                class="font-outfit font-medium text-[16px] text-[#080808] mt-4 mb-3"
+              >
+                4 Digit Pin
+              </h2>
+              <form>
+                <input id="pin"
+                  class="bg-[#F4F5F7] border-0 w-[338px] py-4 pl-[20px] rounded-[32px] font-outfit font-light text-[16px] text-[#080808] outline-0"
+                  type="text"
+                  placeholder="Enter 4 Digit Pin"
+                />
+              </form>
+              <button id="loginBtn"
+                class="w-[338px] py-[14px] px-[20px] bg-[#0874F2] rounded-[32px] mt-4 font-outfit font-semibold text-[20px] text-white tracking-[1px] cursor-pointer"
+              >
+                Login
+              </button>
+              <div id="error" class="toast toast-center" hidden>
+                <div class="alert bg-red-500">
+                  <span id="errorMsg">Phone Number & PIN are wrong</span>
+                </div>
+              </div>
+              <div id="success" class="toast toast-center" hidden>
+                <div class="alert bg-success">
+                  <span id="errorMsg">Login Successful!</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 1st page End -->
+
+    <!-- 2nd page Start -->
+    <div id="secendPage" class="max-w-[1320px] m-auto text-center" hidden>
+      <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <div 
+          class="mockup-phone-display text-white grid place-content-center bg-neutral-900"
+        >
+          It's Glowtime.
+        </div>
+      </div>
+    </div>
+    <!-- 2nd page End -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
