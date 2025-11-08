@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class-38</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="src/all.min.css" />
     <!-- Google Fonts Start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,7 +36,8 @@
                 Mobile Number
               </h2>
               <form>
-                <input id="number"
+                <input
+                  id="number"
                   class="bg-[#F4F5F7] border-0 w-[338px] py-4 pl-[20px] rounded-[32px] font-outfit font-light text-[16px] text-[#080808] outline-0"
                   type="text"
                   placeholder="Enter your number"
@@ -47,13 +49,15 @@
                 4 Digit Pin
               </h2>
               <form>
-                <input id="pin"
+                <input
+                  id="pin"
                   class="bg-[#F4F5F7] border-0 w-[338px] py-4 pl-[20px] rounded-[32px] font-outfit font-light text-[16px] text-[#080808] outline-0"
                   type="text"
                   placeholder="Enter 4 Digit Pin"
                 />
               </form>
-              <button id="loginBtn"
+              <button
+                id="loginBtn"
                 class="w-[338px] py-[14px] px-[20px] bg-[#0874F2] rounded-[32px] mt-4 font-outfit font-semibold text-[20px] text-white tracking-[1px] cursor-pointer"
               >
                 Login
@@ -76,13 +80,100 @@
     <!-- 1st page End -->
 
     <!-- 2nd page Start -->
-    <div id="secendPage" class="max-w-[1320px] m-auto text-center" hidden>
+    <div id="secendPage" class="max-w-[1320px] m-auto text-center">
       <div class="mockup-phone">
         <div class="mockup-phone-camera"></div>
-        <div 
-          class="mockup-phone-display text-white grid place-content-center bg-neutral-900"
-        >
-          It's Glowtime.
+        <div class="mockup-phone-display grid place-content-start bg-[#F4F5F7]">
+          <div class="pt-[80px] pb-[30px] w-[450px] bg-white rounded-br-[43px] rounded-bl-[30px]">
+            <!-- Heading Item Start -->
+            <div class="px-[24px] flex justify-end items-center">
+              <div class="flex w-[75%]">
+                <div class="">
+                  <picture>
+                    <img src="images/ShortLogo.png" alt="ShortLogo.png" />
+                  </picture>
+                </div>
+                <div class="text-left pl-[6px]">
+                  <h5
+                    class="font-outfit font-extrabold text-[18px] text-[#080808]"
+                  >
+                    $45000
+                  </h5>
+                  <p class="font-outfit font-normal text-[14px] text-[#887f7f]">
+                    Available Balance
+                  </p>
+                </div>
+              </div>
+              <!-- <div class=" w-[30%]">
+                
+              </div> -->
+              <button
+                class="font-outfit font-normal text-[14px] text-[#887f7f] border-1 border-[#b4b6b8] rounded-[8px] py-[10px] px-[12px] cursor-pointer"
+              >
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out
+              </button>
+            </div>
+            <!-- Heading Item End -->
+            <div class="h-[1px] bg-[#d3d6da] mt-[20px]"></div>
+            <!-- Payoo Text Start -->
+            <div class="pt-[32px] pb-[24px] px-[24px] text-left">
+              <h2
+                class="text-[#080808] font-outfit font-bold text-[30px] loading-[30px]"
+              >
+                🔥 Welcome to Payooo!
+              </h2>
+              <p
+                class="font-outfit font-normal text-[16px] text-[#887f7f] loading-[26px]"
+              >
+                Enjoy easy and convenient financial services with us. Cashout
+                charge is low and
+              </p>
+            </div>
+            <!-- Payoo Text End -->
+
+            <!-- Button Section Start -->
+            <div class="px-[24px] flex gap-x-[10px] pb-[15px] ">
+              <div class="py-[20px] px-[26px] border-1 border-[#cdd1d4] rounded-[12px]">
+                <button class="cursor-pointer">
+                  <img class="m-auto pb-[4px]" src="images/wallet.png" alt="wallet.png" />
+                  <span class="font-outfit font-normal text-[14px] text-[#5c5555]">Add Money</span>
+                </button>
+              </div>
+              <div class="py-[20px] px-[35.5px] border-1 border-[#cdd1d4] rounded-[12px]">
+                <button class="cursor-pointer">
+                  <img class="m-auto pb-[4px]" src="images/cashout.png" alt="cashout.png" />
+                  <span class="font-outfit font-normal text-[14px] text-[#5c5555]">Cashout</span>
+                </button>
+              </div>
+              <div class="py-[20px] px-[12.5px] border-1 border-[#cdd1d4] rounded-[12px]">
+                <button class="cursor-pointer">
+                  <img class="m-auto pb-[4px]" src="images/tm.png" alt="tm.png" />
+                  <span class="font-outfit font-normal text-[14px] text-[#5c5555]">Transfer Money</span>
+                </button>
+              </div>
+            </div>
+            <div class="px-[24px] flex gap-x-[10px]">
+              <div class="py-[20px] px-[30px] border-1 border-[#cdd1d4] rounded-[12px]">
+                <button class="cursor-pointer">
+                  <img class="m-auto pb-[4px]" src="images/bonous.png" alt="bonous.png" />
+                  <span class="font-outfit font-normal text-[14px] text-[#5c5555]">Get Bonus</span>
+                </button>
+              </div>
+              <div class="py-[20px] px-[40px] border-1 border-[#cdd1d4] rounded-[12px]">
+                <button class="cursor-pointer">
+                  <img class="m-auto pb-[4px]" src="images/paybill.png" alt="paybill.png" />
+                  <span class="font-outfit font-normal text-[14px] text-[#5c5555]">Pay Bill</span>
+                </button>
+              </div>
+              <div class="py-[20px] px-[22px] border-1 border-[#cdd1d4] rounded-[12px]">
+                <button class="cursor-pointer">
+                  <img class="m-auto pb-[4px]" src="images/transaction 1.png" alt="transaction 1" />
+                  <span class="font-outfit font-normal text-[14px] text-[#5c5555]">Transactions</span>
+                </button>
+              </div>
+            </div>
+            <!-- Button Section End -->
+          </div>
         </div>
       </div>
     </div>
