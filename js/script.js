@@ -13,7 +13,6 @@ loginBtn.addEventListener("click", () => {
 
    // Wrong number & pin
   if (phoneNumber !== "12345" && pinNumber !== "123") {
-    errorMsg.innerHTML = "Wrong Number & PIN";
     error.removeAttribute("hidden");
   } 
   else if (phoneNumber !== "12345") {
