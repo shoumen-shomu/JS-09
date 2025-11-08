@@ -29,6 +29,7 @@ loginBtn.addEventListener("click", () => {
     success.removeAttribute("hidden");
     secendPage.removeAttribute("hidden");
     fisrtPage.setAttribute("hidden", true);
+  
   }
   number.value = "";
   pin.value = "";
