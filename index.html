@@ -46,14 +46,14 @@
               <h2
                 class="font-outfit font-medium text-[16px] text-[#080808] mt-4 mb-3"
               >
-                4 Digit Pin
+                7 Digit Pin
               </h2>
               <form>
                 <input
                   id="pin"
                   class="bg-[#F4F5F7] border-0 w-[338px] py-4 pl-[20px] rounded-[32px] font-outfit font-light text-[16px] text-[#080808] outline-0"
-                  type="text"
-                  placeholder="Enter 4 Digit Pin"
+                  type="password"
+                  placeholder="Enter 7 Digit Pin"
                 />
               </form>
               <button
@@ -80,7 +80,7 @@
     <!-- 1st page End -->
 
     <!-- 2nd page Start -->
-    <div id="secendPage" class="max-w-[1320px] m-auto text-center">
+    <div id="secendPage" class="max-w-[1320px] m-auto text-center" hidden >
       <div class="mockup-phone">
         <div class="mockup-phone-camera"></div>
         <div class="mockup-phone-display grid place-content-start bg-[#F4F5F7]">
@@ -113,7 +113,8 @@
                 
               </div> -->
                 <button
-                  class="font-outfit font-normal text-[14px] text-[#887f7f] border-1 border-[#b4b6b8] rounded-[8px] py-[10px] px-[12px] cursor-pointer"
+                  id="logOut"
+                  class="font-outfit font-normal text-[14px] text-[#887f7f] border-1 border-[#b4b6b8] rounded-[8px] py-[10px] px-[12px] cursor-pointer hover:bg-[#F3F8FE] duration-500"
                 >
                   <i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out
                 </button>
@@ -138,10 +139,10 @@
 
               <!-- Button Section Start -->
               <div class="px-[24px] flex gap-x-[10px] pb-[15px]">
-                <div
-                  class="py-[20px] px-[26px] border-1 border-[#cdd1d4] rounded-[12px]"
+                <div id="addMoneyBtn"
+                  class="py-[20px] px-[26px] border-1 border-[#cdd1d4] rounded-[12px] hover:bg-[#F3F8FE] duration-500"
                 >
-                  <button class="cursor-pointer">
+                  <button class="cursor-pointer ">
                     <img
                       class="m-auto pb-[4px]"
                       src="images/wallet.png"
@@ -153,8 +154,8 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="py-[20px] px-[35.5px] border-1 border-[#cdd1d4] rounded-[12px]"
+                <div id="cashoutBtn"
+                  class="py-[20px] px-[35.5px] border-1 border-[#cdd1d4] rounded-[12px] hover:bg-[#F3F8FE] duration-500"
                 >
                   <button class="cursor-pointer">
                     <img
@@ -168,8 +169,8 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="py-[20px] px-[12.5px] border-1 border-[#cdd1d4] rounded-[12px]"
+                <div id="transferMoneyBtn"
+                  class="py-[20px] px-[12.5px] border-1 border-[#cdd1d4] rounded-[12px] hover:bg-[#F3F8FE] duration-500"
                 >
                   <button class="cursor-pointer">
                     <img
@@ -185,8 +186,8 @@
                 </div>
               </div>
               <div class="px-[24px] flex gap-x-[10px]">
-                <div
-                  class="py-[20px] px-[30px] border-1 border-[#cdd1d4] rounded-[12px]"
+                <div id="getBonusBtn"
+                  class="py-[20px] px-[30px] border-1 border-[#cdd1d4] rounded-[12px] hover:bg-[#F3F8FE] duration-500"
                 >
                   <button class="cursor-pointer">
                     <img
@@ -200,8 +201,8 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="py-[20px] px-[40px] border-1 border-[#cdd1d4] rounded-[12px]"
+                <div id="payBillBtn"
+                  class="py-[20px] px-[40px] border-1 border-[#cdd1d4] rounded-[12px] hover:bg-[#F3F8FE] duration-500"
                 >
                   <button class="cursor-pointer">
                     <img
@@ -215,8 +216,8 @@
                     >
                   </button>
                 </div>
-                <div
-                  class="py-[20px] px-[22px] border-1 border-[#cdd1d4] rounded-[12px]"
+                <div id="transactionsBtn"
+                  class="py-[20px] px-[22px] border-1 border-[#cdd1d4] rounded-[12px] hover:bg-[#F3F8FE] duration-500"
                 >
                   <button class="cursor-pointer">
                     <img
@@ -234,9 +235,9 @@
               <!-- Button Section End -->
             </div>
           </section>
-          <!-- Payment History Start -->
-          <section>
-            <div class="px-[24px] pt-[32px] pb-[65px] w-[450px]">
+          <!-- Transactions Part Start -->
+          <section id="transactionsPart" >
+            <div class="px-[24px] pt-[32px] pb-[65px] w-[450px]" >
               <div class="flex justify-between items-center pb-[16px]">
                 <div class="">
                   <h2
@@ -254,62 +255,387 @@
                   class="w-[402px] py-[13px] pl-[16px] mb-[12px] rounded-[12px] border-1 border-[#e9dddd] bg-white flex justify-between items-center"
                 >
                   <div class="w-[15%]">
-                    <img src="images/wallet payment.png" alt="wallet payment.png">
+                    <img
+                      src="images/wallet payment.png"
+                      alt="wallet payment.png"
+                    />
                   </div>
                   <div class="w-[75%] text-left">
-                    <h2 class="font-outfit font-semibold text-[16px] text-[#080808]">Electricity Bill</h2>
-                    <p class="font-outfit font-normal text-[12px] text-[#080808]">Today 01:44 AM</p>
+                    <h2
+                      class="font-outfit font-semibold text-[16px] text-[#080808]"
+                    >
+                      Electricity Bill
+                    </h2>
+                    <p
+                      class="font-outfit font-normal text-[12px] text-[#080808]"
+                    >
+                      Today 01:44 AM
+                    </p>
                   </div>
                   <div class="w-[10%]">
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical text-[#080808]"></i></a>
+                    <a href="#"
+                      ><i
+                        class="fa-solid fa-ellipsis-vertical text-[#080808]"
+                      ></i
+                    ></a>
                   </div>
                 </div>
                 <div
                   class="w-[402px] py-[13px] pl-[16px] rounded-[12px] mb-[12px] border-1 border-[#e9dddd] bg-white flex justify-between items-center"
                 >
                   <div class="w-[15%]">
-                    <img src="images/wallet payment.png" alt="wallet payment.png">
+                    <img
+                      src="images/wallet payment.png"
+                      alt="wallet payment.png"
+                    />
                   </div>
                   <div class="w-[75%] text-left">
-                    <h2 class="font-outfit font-semibold text-[16px] text-[#080808]">Bank Deposit</h2>
-                    <p class="font-outfit font-normal text-[12px] text-[#080808]">Today 01:44 AM</p>
+                    <h2
+                      class="font-outfit font-semibold text-[16px] text-[#080808]"
+                    >
+                      Bank Deposit
+                    </h2>
+                    <p
+                      class="font-outfit font-normal text-[12px] text-[#080808]"
+                    >
+                      Today 01:44 AM
+                    </p>
                   </div>
                   <div class="w-[10%]">
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical text-[#080808]"></i></a>
+                    <a href="#"
+                      ><i
+                        class="fa-solid fa-ellipsis-vertical text-[#080808]"
+                      ></i
+                    ></a>
                   </div>
                 </div>
                 <div
                   class="w-[402px] py-[13px] pl-[16px] mb-[12px] rounded-[12px] border-1 border-[#e9dddd] bg-white flex justify-between items-center"
                 >
                   <div class="w-[15%]">
-                    <img src="images/wallet payment.png" alt="wallet payment.png">
+                    <img
+                      src="images/wallet payment.png"
+                      alt="wallet payment.png"
+                    />
                   </div>
                   <div class="w-[75%] text-left">
-                    <h2 class="font-outfit font-semibold text-[16px] text-[#080808]">Mobile Recharge</h2>
-                    <p class="font-outfit font-normal text-[12px] text-[#080808]">Today 01:44 AM</p>
+                    <h2
+                      class="font-outfit font-semibold text-[16px] text-[#080808]"
+                    >
+                      Mobile Recharge
+                    </h2>
+                    <p
+                      class="font-outfit font-normal text-[12px] text-[#080808]"
+                    >
+                      Today 01:44 AM
+                    </p>
                   </div>
                   <div class="w-[10%]">
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical text-[#080808]"></i></a>
+                    <a href="#"
+                      ><i
+                        class="fa-solid fa-ellipsis-vertical text-[#080808]"
+                      ></i
+                    ></a>
                   </div>
                 </div>
                 <div
                   class="w-[402px] py-[13px] pl-[16px] mb-[12px] rounded-[12px] border-1 border-[#e9dddd] bg-white flex justify-between items-center"
                 >
                   <div class="w-[15%]">
-                    <img src="images/wallet payment.png" alt="wallet payment.png">
+                    <img
+                      src="images/wallet payment.png"
+                      alt="wallet payment.png"
+                    />
                   </div>
                   <div class="w-[75%] text-left">
-                    <h2 class="font-outfit font-semibold text-[16px] text-[#080808]">Gas Bill</h2>
-                    <p class="font-outfit font-normal text-[12px] text-[#080808]">Today 01:44 AM</p>
+                    <h2
+                      class="font-outfit font-semibold text-[16px] text-[#080808]"
+                    >
+                      Gas Bill
+                    </h2>
+                    <p
+                      class="font-outfit font-normal text-[12px] text-[#080808]"
+                    >
+                      Today 01:44 AM
+                    </p>
                   </div>
                   <div class="w-[10%]">
-                    <a href="#"><i class="fa-solid fa-ellipsis-vertical text-[#080808]"></i></a>
+                    <a href="#"
+                      ><i
+                        class="fa-solid fa-ellipsis-vertical text-[#080808]"
+                      ></i
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <!-- Payment History End -->
+          <!-- Transactions Part End -->
+
+          <!-- Add Money Part Start -->
+          <section id="addMoneyPart" hidden>
+            <div class="px-[24px] pt-[10px] pb-[65px] w-[450px]">
+              <h2
+                class="font-outfit font-semibold text-[18px] text-[#080808] text-left mb-[10px]"
+              >
+                Add Money
+              </h2>
+              <div class="py-[24px] px-[24px] bg-white rounded-[24px]">
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Select A Bank
+                  </h5>
+                  <select
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                  >
+                    <option vlaue="" disabled selected>Select Bank</option>
+                    <option vlaue="">BANK OF SHOUMEN</option>
+                    <option vlaue="">BANK OF Al-AMIN SIR</option>
+                  </select>
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Bank Account Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter 11 digit account number"
+                  />
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Pin Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                  />
+                </div>
+                <div class="mt-[15px]">
+                  <button
+                    class="bg-[#0874F2] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-semibold text-[20px] text-[#ffffff] outline-0 text-center items-center cursor-pointer commonBtn"
+                  >
+                    Add Money
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Add Money Part End -->
+
+          <!-- Cash Out Part Start -->
+          <section id="cashOutPart" hidden>
+            <div class="px-[24px] pt-[10px] pb-[65px] w-[450px]">
+              <h2
+                class="font-outfit font-semibold text-[18px] text-[#080808] text-left mb-[10px]"
+              >
+                Cash Out
+              </h2>
+              <div class="py-[24px] px-[24px] bg-white rounded-[24px]">
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Agent Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter 11 digit number"
+                  />
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Amount
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter amount to withdraw"
+                  />
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Pin Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                  />
+                </div>
+                <div class="mt-[15px]">
+                  <button 
+                    class="bg-[#0874F2] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-semibold text-[20px] text-[#ffffff] outline-0 text-center items-center cursor-pointer commonBtn"
+                  >
+                    Withdraw Money
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Cash Out Part End -->
+
+          <!-- Transfer Money Part Start -->
+          <section id="transferMoneyPart" hidden>
+            <div class="px-[24px] pt-[10px] pb-[65px] w-[450px]">
+              <h2
+                class="font-outfit font-semibold text-[18px] text-[#080808] text-left mb-[10px]"
+              >
+                Transfer Money
+              </h2>
+              <div class="py-[24px] px-[24px] bg-white rounded-[24px]">
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    User Account Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter 11 digit number"
+                  />
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Amount
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter amount to withdraw"
+                  />
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Pin Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                  />
+                </div>
+                <div class="mt-[15px]">
+                  <button
+                    class="bg-[#0874F2] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-semibold text-[20px] text-[#ffffff] outline-0 text-center items-center cursor-pointer commonBtn"
+                  >
+                    Send Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Transfer Money Part End -->
+
+          <!-- Get Bonus Part Start -->
+          <section id="getBonusPart" hidden>
+            <div class="px-[24px] pt-[10px] pb-[65px] w-[450px]">
+              <h2
+                class="font-outfit font-semibold text-[18px] text-[#080808] text-left mb-[10px]"
+              >
+                Get Bonus
+              </h2>
+              <div class="py-[24px] px-[24px] bg-white rounded-[24px]">
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Enter Bonus Coupon
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter your coupon"
+                  />
+                </div>
+                <div class="mt-[15px]">
+                  <button 
+                    class="bg-[#0874F2] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-semibold text-[20px] text-[#ffffff] outline-0 text-center items-center cursor-pointer commonBtn"
+                  >
+                    Get Bonus
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Get Bonus Part End -->
+
+          <!-- Pay Bill Part Start -->
+          <section id="payBillPart" hidden >
+                        <div class="px-[24px] pt-[10px] pb-[65px] w-[450px]">
+              <h2
+                class="font-outfit font-semibold text-[18px] text-[#080808] text-left mb-[10px]"
+              >
+                Pay Bill
+              </h2>
+              <div class="py-[24px] px-[24px] bg-white rounded-[24px]">
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Select To Pay
+                  </h5>
+                  <select
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                  >
+                    <option vlaue="" disabled selected>Select Bank</option>
+                    <option vlaue="">BANK OF SHOUMEN</option>
+                    <option vlaue="">BANK OF Al-AMIN SIR</option>
+                  </select>
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Biller Account Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="text"
+                    placeholder="Enter account number"
+                  />
+                </div>
+                <div class="text-left mb-[5px]">
+                  <h5
+                    class="font-outfit font-medium text-[16px] text-[#080808] pb-[12px]"
+                  >
+                    Pin Number
+                  </h5>
+                  <input
+                    class="bg-[#F4F5F7] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-light text-[16px] text-[#b8adad] outline-0"
+                    type="password"
+                    placeholder="Enter 4 digit pin number"
+                  />
+                </div>
+                <div class="mt-[15px]">
+                  <button
+                    class="bg-[#0874F2] py-[16px] pl-[20px] w-[354px] rounded-[32px] font-outfit font-semibold text-[20px] text-[#ffffff] outline-0 text-center items-center cursor-pointer commonBtn"
+                  >
+                    Pay Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Pay Bill Part End -->
         </div>
       </div>
     </div>
